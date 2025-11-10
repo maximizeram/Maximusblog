@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post Title</title>
+<link rel="stylesheet" href="../style.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const now = new Date();
+  const dateElem = document.getElementById("post-date");
+  dateElem.textContent = now.toDateString();
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a href="../index.html">← Back to Home</a></h1>
+    </header>
+
+    <article>
+      <h1 id="post-title">Post Title</h1>
+      <div class="post-date" id="post-date"></div>
+
+      <div class="post-content">
+        <!-- Paste your article here -->
+        <p>This is where you paste your content from Google Docs. You can include images using &lt;img src="../images/example.jpg"&gt;.</p>
+      </div>
+    </article>
+
+    <footer>
+      © 2025 My Angry Birds Blog
+    </footer>
+  </div>
+</body>
+</html>
