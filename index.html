@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Angry-Style Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1 class="site-title">My Angry-Style Blog</h1>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Posts</h2>
+      <ul class="post-list" id="post-list"></ul>
+    </main>
+    <footer style="margin-top:40px;color:#666;font-size:14px;">
+      © <span id="yr"></span> — Made with HTML
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+  <script src="posts.js"></script>
+  <script>
+    const container=document.getElementById('post-list');
+    if(window.POSTS&&POSTS.length){
+      POSTS.forEach(p=>{
+        const li=document.createElement('li');
+        li.className='post-card';
+        li.innerHTML=`${p.thumb?`<img class="thumb" src="${p.thumb}" alt="${p.title}">`:''}
+        <div class="meta"><h3><a href="${p.url}">${p.title}</a></h3>
+        <div class="date">${p.date}</div><p>${p.excerpt||''}</p></div>`;
+        container.appendChild(li);
+      });
+    }else{
+      container.innerHTML='<li>No posts yet — create one by copying post-template.html into /posts/</li>';
+    }
+  </script>
+</body>
+</html>
