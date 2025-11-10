@@ -1,11 +1,11 @@
 /* style.css - Classic White Theme */
 @font-face {
   font-family: 'AngryRegular';
-  src: url('../fonts/angrybirds-regular.ttf') format('truetype');
+  src: url('fonts/angrybirds-regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'AngryText';
-  src: url('../fonts/AngryBirdsText.ttf') format('truetype');
+  src: url('fonts/AngryBirdsText.ttf') format('truetype');
 }
 :root {
   --accent: #d90000;
