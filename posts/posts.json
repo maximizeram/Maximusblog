@@ -1,12 +1,7 @@
 [
   {
-    "title": "My First Post",
-    "filename": "my-first-post.html",
-    "date": "2025-11-10"
-  },
-  {
     "title": "AB Test",
-    "filename": "ab-test.html",
+    "filename": "ab_test.html",
     "date": "2025-11-10"
   }
 ]
