@@ -1,27 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Post Title — My Blog</title>
-  <link rel="stylesheet" href="../style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post Title</title>
+<link rel="stylesheet" href="../style.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const now = new Date();
+  const dateElem = document.getElementById("post-date");
+  dateElem.textContent = now.toDateString();
+});
+</script>
 </head>
 <body>
   <div class="container">
-    <header class="site-header">
-      <h1 class="site-title"><a href="/">My Angry-Style Blog</a></h1>
+    <header>
+      <h1><a href="../index.html">← Back to Home</a></h1>
     </header>
-    <article class="article">
-      <h1>Angry Day at the Park</h1>
-      <div class="date">Nov 10, 2025</div>
-      <img src="../images/post1-cover.jpg" alt="cover image">
-      <p>Here’s the first paragraph of your article. This text uses the 'AngryText' font.</p>
-      <p>More commentary... </p>
-      <h3>Full Write-up (Google Doc)</h3>
-      <iframe src="https://docs.google.com/document/d/e/YOUR_DOC_ID/pub?embedded=true" style="width:100%;min-height:500px;border:1px solid #ddd;"></iframe>
-      <p>Final thoughts.</p>
+
+    <article>
+      <h1 id="post-title">Post Title</h1>
+      <div class="post-date" id="post-date"></div>
+
+      <div class="post-content">
+        <!-- Paste your article here -->
+        <p>This is where you paste your content from Google Docs. You can include images using &lt;img src="../images/example.jpg"&gt;.</p>
+      </div>
     </article>
-    <p><a href="/">← Back to home</a></p>
+
+    <footer>
+      © 2025 My Angry Birds Blog
+    </footer>
   </div>
 </body>
 </html>
