@@ -1,158 +1,126 @@
-/* === RESET === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* === BASE RESET === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: url('./images/background.jpg') no-repeat center center fixed;
+  background: url('./images/background.jpg') no-repeat center top fixed;
   background-size: cover;
-  font-family: 'AngryRegular', sans-serif;
-  color: #000;
+  font-family: 'AngryText', sans-serif;
+  color: #222;
   text-align: center;
-  overflow-x: hidden;
+  overflow-x: hidden; /* prevent sideways scroll */
 }
 
-/* === TOP CLOUDS === */
-body::before {
-  content: "";
-  background: url('./images/cloud-left.png') no-repeat left top,
-              url('./images/cloud-right.png') no-repeat right top;
-  background-size: 400px, 400px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* === HEADER BAR === */
+/* === TOP BAR WITH CLOUD IMAGES (as <img> in HTML) === */
 .topbar {
   background: url('./images/bar-top.png') repeat-x center top;
-  height: 85px;
+  height: 90px;
   position: relative;
-  top: 60px; /* lowered yellow bar */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 10;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* === NAVIGATION LINKS === */
-.navbar {
+  margin-top: 12px;           /* ↓ lowers the yellow bar a bit */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  position: relative;
-  top: -25px; /* lift links up slightly */
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  z-index: 10;
 }
 
+/* Clouds inserted in HTML: <img class="cloud cloud-left/right"> */
+.cloud {
+  position: absolute;
+  top: 0;
+  height: 90px;
+  z-index: 1;
+}
+.cloud-left { left: 0; }
+.cloud-right { right: 0; }
+
+/* === NAV LINKS ON THE BAR === */
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  top: -6px;                  /* ↑ centers text inside the yellow bar */
+}
 .navbar a {
   font-family: 'AngryRegular', sans-serif;
   font-size: 22px;
-  color: #000;
-  text-decoration: none;
   text-transform: uppercase;
-  background: transparent; /* remove yellow boxes */
-  padding: 0;
-  text-shadow: 1px 1px 3px rgba(255,255,255,0.9), -1px -1px 3px rgba(255,255,255,0.9);
-  transition: all 0.2s ease-in-out;
-}
-
-.navbar a:hover {
-  color: #d62828;
-  transform: scale(1.05);
-}
-
-/* === HEADER TITLE === */
-.header {
-  margin-top: 80px;
-  padding: 20px 0 10px;
-  position: relative;
-  z-index: 2;
-}
-
-.header h1 {
-  font-family: 'AngryBirdsRegular', sans-serif;
-  font-size: 52px;
-  color: #d62828;
-  text-shadow: 2px 2px #fff;
-  letter-spacing: 2px;
-}
-
-.header p {
-  font-family: 'AngryRegular', sans-serif;
-  font-size: 20px;
   color: #000;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* === POSTS CONTAINER === */
-.posts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-  padding: 20px;
-  z-index: 2;
-  position: relative;
-}
-
-/* === POST ITEM === */
-.post {
-  width: 70%;
-  background: none; /* remove white rounded box */
-  border-radius: 0;
-  padding: 20px 0;
-  margin: 15px 0;
-  box-shadow: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
-}
-
-.post:hover {
-  transform: scale(1.02);
-}
-
-.post a {
-  color: #2b2be0;
-  font-size: 28px;
   text-decoration: none;
-  font-weight: bold;
+  background: transparent;    /* ← removes any “yellow box” behind text */
+  padding: 0;                 /* ← no pill/box padding */
+  text-shadow: 1px 1px 0 #fff;
+  transition: transform .2s ease, color .2s ease;
 }
+.navbar a:hover { color: #d62828; transform: scale(1.05); }
 
-.post a:hover {
-  color: #d62828;
+/* === TITLE & SUBTITLE === */
+h1 {
+  font-family: 'AngryRegular', sans-serif;
+  font-size: 46px;
+  color: #c62828;
+  margin: 28px 0 6px;
+  text-shadow: 1px 1px 0 #fff;
 }
-
-.post p {
-  margin-top: 10px;
+.subtitle {
+  font-family: 'AngryText', sans-serif;
   font-size: 18px;
+  margin-bottom: 28px;
 }
 
-/* === POST IMAGE CONSTRAINTS === */
-.post-container img {
-  max-width: 90%; /* limit image size to page width */
+/* === POSTS LIST (homepage) === */
+main {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  background: transparent;    /* ← removes the white rounded card */
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+}
+.post {
+  padding: 18px 0;
+  margin: 8px 0;
+  border-bottom: 2px solid rgba(0,0,0,.12);
+}
+.post h2 {
+  font-family: 'AngryRegular', sans-serif;
+  font-size: 28px;
+  color: #2b2be0;
+}
+.post h2 a { color: inherit; text-decoration: none; }
+.post h2 a:hover { color: #d62828; }
+.post .date { margin-top: 8px; }
+
+/* === ARTICLE / POST PAGES === */
+/* These rules constrain big images on post pages */
+.post-container img,
+article img,
+.content img,
+.post-body img {
+  max-width: 100%;
   height: auto;
-  border-radius: 12px;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+}
+
+/* Optional wrapper on post pages */
+.post-container {
+  max-width: 900px;
+  margin: 30px auto 50px;
+  padding: 0 20px;
+  background: transparent;    /* keep post pages consistent with homepage */
+  box-shadow: none;
+  border-radius: 0;
 }
 
 /* === FOOTER === */
-.footer {
-  margin-top: 60px;
-  font-size: 16px;
-  color: #333;
+footer {
   text-align: center;
-  padding-bottom: 20px;
-  z-index: 2;
-  position: relative;
+  font-size: 14px;
+  color: #444;
+  padding: 40px 0;
 }
-
