@@ -1,4 +1,4 @@
-/* style.css - Classic White Theme */
+ /* === FONTS === */
 @font-face {
   font-family: 'AngryRegular';
   src: url('/Maximusblog/fonts/angrybirds-regular.ttf') format('truetype');
@@ -7,78 +7,33 @@
   font-family: 'AngryText';
   src: url('/Maximusblog/fonts/AngryBirdsText.ttf') format('truetype');
 }
-}
-:root {
-  --accent: #d90000;
-  --text-color: #222;
-  --bg: #ffffff;
-  --max-width: 900px;
-}
+
+/* === GLOBAL STYLES === */
 body {
   margin: 0;
-  font-family: 'AngryText', sans-serif;
-  background: var(--bg);
-  color: var(--text-color);
-}
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-header, footer {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-a:hover { text-decoration: underline; }
-h1, h2, h3 {
-  font-family: 'AngryRegular', serif;
-  color: var(--accent);
-}
-.post-list {
-  list-style: none;
   padding: 0;
-}
-.post-item {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
-}
-.post-item h2 { margin-bottom: 0.2rem; }
-.post-date { color: #777; font-size: 0.9rem; }
-.post-content p {
-  line-height: 1.6;
-  font-size: 1rem;
-}
-img { max-width: 100%; border-radius: 6px; margin: 1rem 0; }
-footer { color: #666; font-size: 0.9rem; margin-top: 2rem; }
-
-/* === Angry Birds Sky Background === */
-body {
   background: url('images/ui/background.jpg') no-repeat center top fixed;
   background-size: cover;
   font-family: 'AngryText', sans-serif;
+  color: #222;
 }
 
-/* === Top Bar === */
+/* === HEADER & NAVIGATION BAR === */
 .topbar {
   position: relative;
   background: url('images/ui/bar-top.png') repeat-x center top;
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 
-/* Cloud edges */
 .cloud {
   position: absolute;
   top: 0;
-  height: 60px;
+  height: 70px;
   z-index: 1;
 }
 
@@ -90,12 +45,11 @@ body {
   right: 0;
 }
 
-/* Navigation links */
 .navbar {
   position: relative;
   z-index: 2;
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .navbar a {
@@ -103,12 +57,67 @@ body {
   color: #222;
   text-decoration: none;
   font-size: 20px;
+  text-transform: uppercase;
   text-shadow: 1px 1px 0 #fff;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #c62828;
+  color: #d62828;
   transform: scale(1.1);
+}
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === BLOG HEADER === */
+h1 {
+  font-family: 'AngryRegular', sans-serif;
+  font-size: 42px;
+  color: #c62828;
+  text-align: center;
+  margin-top: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'AngryText', sans-serif;
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+/* === BLOG POSTS LIST === */
+.post {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.post h2 {
+  font-family: 'AngryRegular', sans-serif;
+  color: #c62828;
+  font-size: 28px;
+}
+
+.post p {
+  font-family: 'AngryText', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  padding: 40px 0;
 }
 
