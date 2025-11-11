@@ -66,16 +66,22 @@ body {
 }
 
 .navbar a {
-  font-family: 'AngryBirdsText', sans-serif !important;
-  font-size: 28px; /* bigger and bolder text */
+  font-family: 'AngryBirdsRegular', sans-serif !important;
+  font-size: 28px;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: 2px 2px 0 #fff; /* stronger cartoon-style outline */
-  background: rgba(255, 220, 0, 0.9);
-  padding: 8px 20px; /* more breathing room */
-  border-radius: 12px;
+  text-shadow: 2px 2px 0 #fff;
   transition: all 0.25s ease-in-out;
+  padding: 0; /* remove yellow box padding */
+  background: none; /* removes the yellow box */
+  border-radius: 0;
+}
+
+.navbar a:hover {
+  color: #d62828; /* turns red on hover */
+  transform: scale(1.05);
+}
 }
 }
 
