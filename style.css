@@ -90,11 +90,14 @@ body::before {
 }
 
 /* === HEADER TITLE === */
-.header {
-  margin-top: 25px;
-  padding: 10px 0;
-  position: relative;
-  z-index: 2;
+.header h1 {
+  font-family: 'AngryBirdsRegular', sans-serif !important;
+  font-size: 58px;
+  color: #d62828; /* bright Angry Birds red */
+  text-shadow: 3px 3px 0 #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 }
 
 .header h1 {
