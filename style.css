@@ -220,7 +220,7 @@ body {
   text-align: center;
   position: relative;
   bottom: 0;
-  color: #333;
+  color: #fff; /* ✅ now white text */
   font-size: 16px;
   display: flex;
   align-items: flex-end;
