@@ -214,18 +214,22 @@ body {
 /* === FOOTER === */
 .footer {
   background: url('./images/bg-footer.png') repeat-x bottom center;
-  background-size: contain;
+  background-size: cover;
   height: 180px;
   width: 100%;
   text-align: center;
   position: relative;
   bottom: 0;
-  color: #fff; /* ✅ now white text */
+  color: #fff;
+  font-family: 'AngryBirdsText', sans-serif !important;
   font-size: 16px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 15px;
   z-index: 2;
-  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
