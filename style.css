@@ -12,16 +12,33 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('/Maximusblog/images/ui/background.jpg') no-repeat center top fixed;
+  background: url('/Maximusblog/images/background.jpg') no-repeat center top fixed;
   background-size: cover;
   font-family: 'AngryText', sans-serif;
   color: #222;
+  text-align: center;
+}
+
+/* === TITLE & SUBTITLE === */
+h1 {
+  font-family: 'AngryRegular', sans-serif;
+  font-size: 46px;
+  color: #c62828;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: 'AngryText', sans-serif;
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 40px;
 }
 
 /* === HEADER & NAVIGATION BAR === */
 .topbar {
   position: relative;
-  background: url('/Maximusblog/images/ui/bar-top.png') repeat-x center top;
+  background: url('/Maximusblog/images/bar-top.png') repeat-x center top;
   height: 70px;
   display: flex;
   align-items: center;
@@ -30,7 +47,6 @@ body {
   z-index: 10;
 }
 
-/* Cloud edges */
 .cloud {
   position: absolute;
   top: 0;
@@ -46,12 +62,14 @@ body {
   right: 0;
 }
 
-/* Navigation links */
+/* === NAVIGATION LINKS === */
 .navbar {
   position: relative;
   z-index: 2;
   display: flex;
+  justify-content: center;
   gap: 50px;
+  margin-top: 15px;
 }
 
 .navbar a {
@@ -72,7 +90,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Icon styling */
 .icon {
   height: 22px;
   width: 22px;
@@ -85,34 +102,18 @@ body {
   transform: rotate(-10deg) scale(1.1);
 }
 
-/* === MAIN CONTENT === */
+/* === BLOG CONTENT === */
 main {
   max-width: 900px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
-/* === BLOG HEADER === */
-h1 {
-  font-family: 'AngryRegular', sans-serif;
-  font-size: 42px;
-  color: #c62828;
-  text-align: center;
-  margin-top: 0;
-}
-
-.subtitle {
-  text-align: center;
-  font-family: 'AngryText', sans-serif;
-  font-size: 18px;
-  color: #111;
-  margin-bottom: 40px;
-}
-
-/* === BLOG POSTS LIST === */
+/* === POSTS === */
 .post {
   margin-bottom: 40px;
   padding-bottom: 20px;
