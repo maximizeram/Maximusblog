@@ -22,8 +22,11 @@ body {
 /* === HEADER BAR === */
 .topbar {
   background: url('./images/bar-top.png') repeat-x top center;
-  height: 80px;
+  height: 90px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
@@ -31,7 +34,7 @@ body {
 .cloud {
   position: absolute;
   top: 0;
-  height: 80px;
+  height: 90px;
   z-index: 1;
 }
 
@@ -54,22 +57,24 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* === NAVIGATION === */
+/* === NAVIGATION (on top bar) === */
 .navbar {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-bottom: 40px;
+  align-items: center;
+  gap: 80px;
 }
 
 .navbar a {
   font-family: 'AngryRegular', sans-serif;
-  font-size: 20px;
-  text-decoration: none;
+  font-size: 22px;
   color: #000;
+  text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 0 #fff;
-  transition: 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar a:hover {
