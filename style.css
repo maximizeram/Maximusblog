@@ -175,15 +175,15 @@ body {
 }
 }
 
-/* === SOCIAL ICONS (top-right corner) === */
+/* === SOCIAL ICONS (fixed top-right corner) === */
 .social-icons {
   position: fixed;
-  top: 18px;
+  top: 12px;
   right: 24px;
   display: flex;
   align-items: center;
   gap: 14px;
-  z-index: 10;
+  z-index: 999; /* keeps it above clouds and header */
 }
 
 .social-icons img {
@@ -191,6 +191,7 @@ body {
   height: 34px;
   object-fit: contain;
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .social-icons img:hover {
