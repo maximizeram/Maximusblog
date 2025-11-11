@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Angry Birds Blog</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maximus Overdrive’s Thoughtpieces</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <body>
+  <!-- === Top Decorative Bar === -->
   <header class="topbar">
-  <img src="/Maximusblog/images/ui/cloud-left.png"  class="cloud cloud-left"  alt="">
-  <img src="/Maximusblog/images/ui/cloud-right.png" class="cloud cloud-right" alt="">
+    <img src="/Maximusblog/images/cloud-left.png" class="cloud cloud-left" alt="Left cloud" />
+    <img src="/Maximusblog/images/cloud-right.png" class="cloud cloud-right" alt="Right cloud" />
+  </header>
+
+  <!-- === Site Title and Description === -->
+  <h1>Maximus Overdrive’s Thoughtpieces</h1>
+  <div class="subtitle">
+    Angry Birds merch reviews, blogs, and projects with plenty of wit.
+  </div>
+
+  <!-- === Navigation Bar === -->
   <nav class="navbar">
     <a href="https://www.youtube.com/@MaximusOverdrive" target="_blank">YouTube</a>
     <a href="https://www.ebay.com/str/commonwealthtoycollection" target="_blank">eBay</a>
     <a href="/Maximusblog/index.html">Blog</a>
   </nav>
-</header>
-      <h1>Maximus Overdrive's Thoughtpieces</h1>
-      <p>Angry Birds merch reviews, blogs, and projects with plenty of wit.</p>
-    </header>
 
-    <main>
-      <ul class="post-list" id="postList"></ul>
-    </main>
+  <!-- === Blog Content === -->
+  <main id="posts-container">
+    <!-- Posts get auto-filled from posts.js -->
+  </main>
 
-    <footer>
-      © <span id="year"></span> Maximus Overdrive LLC
-    </footer>
-  </div>
+  <!-- === Footer === -->
+  <footer>
+    © 2025 Maximus Overdrive LLC
+  </footer>
 
-<script src="posts.js"></script>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- === Scripts === -->
+  <script src="posts.js"></script>
 </body>
 </html>
