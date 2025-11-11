@@ -43,15 +43,17 @@ body {
 
 /* === HEADER BAR === */
 .topbar {
-  background: url('./images/bar-top.png') repeat-x center top;
-  height: 90px;
+  background: url('./images/bar-top.png') no-repeat center top;
+  background-size: cover; /* fills entire width without repeating */
+  height: 140px; /* increased height */
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   z-index: 2;
   margin-top: 30px;
   position: relative;
+}
 }
 
 /* === NAVIGATION LINKS === */
