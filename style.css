@@ -1,4 +1,4 @@
- /* === FONTS === */
+/* === FONTS === */
 @font-face {
   font-family: 'AngryRegular';
   src: url('/Maximusblog/fonts/angrybirds-regular.ttf') format('truetype');
@@ -12,7 +12,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('images/ui/background.jpg') no-repeat center top fixed;
+  background: url('/Maximusblog/images/ui/background.jpg') no-repeat center top fixed;
   background-size: cover;
   font-family: 'AngryText', sans-serif;
   color: #222;
@@ -21,7 +21,7 @@ body {
 /* === HEADER & NAVIGATION BAR === */
 .topbar {
   position: relative;
-  background: url('images/ui/bar-top.png') repeat-x center top;
+  background: url('/Maximusblog/images/ui/bar-top.png') repeat-x center top;
   height: 70px;
   display: flex;
   align-items: center;
@@ -30,6 +30,7 @@ body {
   z-index: 10;
 }
 
+/* Cloud edges */
 .cloud {
   position: absolute;
   top: 0;
@@ -45,6 +46,7 @@ body {
   right: 0;
 }
 
+/* Navigation links */
 .navbar {
   position: relative;
   z-index: 2;
@@ -53,6 +55,9 @@ body {
 }
 
 .navbar a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: 'AngryRegular', sans-serif;
   color: #222;
   text-decoration: none;
@@ -65,6 +70,19 @@ body {
 .navbar a:hover {
   color: #d62828;
   transform: scale(1.1);
+}
+
+/* Icon styling */
+.icon {
+  height: 22px;
+  width: 22px;
+  margin-right: 4px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.navbar a:hover .icon {
+  transform: rotate(-10deg) scale(1.1);
 }
 
 /* === MAIN CONTENT === */
@@ -120,4 +138,3 @@ footer {
   color: #444;
   padding: 40px 0;
 }
-
