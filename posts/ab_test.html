@@ -3,72 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AB Test | Maximus Overdrive's Thoughtpieces</title>
+  <title>AB Test | Maximus Overdrive’s Thoughtpieces</title>
   <link rel="stylesheet" href="../style.css" />
-  <style>
-    /* --- POST PAGE FIXES --- */
-    body {
-      overflow-x: hidden;
-      background: url('../images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .post-container {
-      max-width: 900px;
-      margin: 120px auto 60px auto;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 20px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-      padding: 40px;
-    }
-
-    .post-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .post-container p {
-      font-size: 18px;
-      text-align: left;
-      line-height: 1.6;
-      color: #111;
-    }
-
-    /* Keep footer visible and tidy */
-    .footer {
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
-  <!-- Top Bar -->
-  <div class="topbar">
-    <div class="navbar">
+  <!-- === CLOUD BACKGROUND === -->
+  <div class="clouds"></div>
+
+  <!-- === HEADER BAR === -->
+  <header class="topbar">
+    <nav class="navbar">
       <a href="https://www.youtube.com/@MaximusOverdrive" target="_blank">YouTube</a>
       <a href="https://www.ebay.com/str/commonwealthtoycollection" target="_blank">eBay</a>
-      <a href="../index.html">Blog</a>
-    </div>
-  </div>
+      <a href="../index.html">Blog</a> <!-- Fixed: now points back to homepage -->
+    </nav>
+  </header>
 
-  <!-- Header -->
-  <div class="header">
+  <!-- === POST CONTENT === -->
+  <article class="post">
     <h1>AB Test</h1>
-    <p>Posted on November 10, 2025</p>
-  </div>
+    <p><strong>Posted on November 10, 2025</strong></p>
+    <div class="post-image">
+      <img src="../images/abbeanbags.jpg" alt="AB beanbags" />
+    </div>
+    <p>Hard to decipher who made them, but there is a clear label. This is, again, a test.</p>
+  </article>
 
-  <!-- Post Content -->
-  <div class="post-container">
-    <img src="../images/ab_test.jpg" alt="Angry Birds Black Bird beanbag" />
-    <p>
-      Hard to decipher who made them, but there is a clear label. This is, again, a test.
-    </p>
-  </div>
-
-  <div class="footer">
+  <!-- === FOOTER === -->
+  <footer class="footer">
     © 2025 Maximus Overdrive LLC
-  </div>
+  </footer>
 </body>
 </html>
