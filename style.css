@@ -31,25 +31,25 @@ body::before {
 
 /* === HEADER BAR === */
 .topbar {
-  background: url('./images/bar-top.png') repeat-x top center;
-  background-position-y: 10px; /* Move yellow bar down slightly */
-  height: 90px;
+  background: url('./images/bar-top.png') repeat-x center top;
+  height: 95px; /* taller bar */
   position: relative;
+  top: 30px; /* move bar downward slightly */
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
 /* === NAVIGATION LINKS === */
 .navbar {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
-  top: -8px; /* Raise text a bit for better centering */
+  position: relative;
+  top: -6px; /* slightly raise text within yellow bar */
 }
 
 .navbar a {
@@ -59,21 +59,17 @@ body::before {
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 0 #fff;
-  background: rgba(255, 220, 0, 0.6);
-  padding: 4px 14px;
-  border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar a:hover {
-  background: rgba(255, 220, 0, 1);
   color: #d62828;
   transform: scale(1.05);
 }
 
 /* === HEADER TITLE === */
 .header {
-  margin-top: 10px;
+  margin-top: 60px;
   padding: 20px 0 10px;
   position: relative;
   z-index: 2;
@@ -100,21 +96,22 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px;
   padding: 20px;
   z-index: 2;
   position: relative;
 }
 
-/* === POST CARDS === */
+/* === POST LIST ITEM === */
 .post {
   width: 70%;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 40px;
-  margin: 20px 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  background: none; /* remove white rounded box */
+  border-radius: 0;
+  padding: 20px 0;
+  margin: 10px 0;
+  box-shadow: none;
   transition: transform 0.3s ease-in-out;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .post:hover {
@@ -133,7 +130,7 @@ body::before {
 }
 
 .post p {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 18px;
 }
 
