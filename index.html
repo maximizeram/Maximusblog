@@ -8,30 +8,31 @@
 </head>
 
 <body>
-  <!-- Decorative Header -->
+  <!-- === TOP BAR === -->
   <header class="topbar">
     <img src="./images/cloud-left.png" class="cloud cloud-left" alt="Left cloud" />
     <img src="./images/cloud-right.png" class="cloud cloud-right" alt="Right cloud" />
+
+    <!-- Moved Navbar INTO topbar -->
+    <nav class="navbar">
+      <a href="https://www.youtube.com/@MaximusOverdrive" target="_blank">YouTube</a>
+      <a href="https://www.ebay.com/str/commonwealthtoycollection" target="_blank">eBay</a>
+      <a href="./posts/ab_test.html">Blog</a>
+    </nav>
   </header>
 
-  <!-- Site Title -->
+  <!-- === SITE TITLE === -->
   <h1>Maximus Overdrive’s Thoughtpieces</h1>
   <div class="subtitle">
     Angry Birds merch reviews, blogs, and projects with plenty of wit.
   </div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="https://www.youtube.com/@MaximusOverdrive" target="_blank">YouTube</a>
-    <a href="https://www.ebay.com/str/commonwealthtoycollection" target="_blank">eBay</a>
-    <a href="index.html">Blog</a>
-  </nav>
-
-  <!-- Blog Content -->
+  <!-- === BLOG CONTENT === -->
   <main id="posts-container">
-    <!-- posts.js will populate this -->
+    <!-- posts.js will fill in from posts.json -->
   </main>
 
+  <!-- === FOOTER === -->
   <footer>
     © 2025 Maximus Overdrive LLC
   </footer>
