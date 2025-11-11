@@ -84,6 +84,36 @@ body {
   transform: scale(1.05);
 }
 
+/* === MULTICOLOR eBAY LINK === */
+.ebay-link {
+  font-family: 'AngryBirdsRegular', sans-serif !important;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #fff;
+  display: inline-block;
+  transition: transform 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.ebay-e { color: #e53238; }  /* red */
+.ebay-b { color: #0064d2; }  /* blue */
+.ebay-a { color: #f5af02; }  /* yellow */
+.ebay-y { color: #86b817; }  /* green */
+
+/* Bouncy hover animation */
+.ebay-link:hover span {
+  animation: ebayBounce 0.3s ease-in-out;
+  display: inline-block;
+}
+
+@keyframes ebayBounce {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-5px); }
+  60% { transform: translateY(2px); }
+  100% { transform: translateY(0); }
+}
+
 /* === HEADER TITLE === */
 .header {
   margin-top: 20px;
@@ -212,21 +242,20 @@ body {
 }
 
 /* === FOOTER === */
-/* Footer container: just holds the text */
 .footer {
   position: relative;
   width: 100%;
-  height: 180px;               /* visible height of the ground */
+  height: 180px;
   display: flex;
-  align-items: flex-end;       /* keep the text near the bottom */
+  align-items: flex-end;
   justify-content: center;
   padding-bottom: 15px;
-  color: #fff;                 /* white copyright line */
+  color: #fff;
   font-family: 'AngryBirdsText', sans-serif !important;
   font-size: 16px;
-  background: transparent;     /* no blue box */
-  box-shadow: none;            /* no drop shadow */
-  z-index: 0;                  /* so the pseudo-layer can sit behind safely */
+  background: transparent;
+  box-shadow: none;
+  z-index: 0;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
@@ -236,11 +265,10 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;                   /* anchor to the bottom edge */
+  bottom: 0;
   height: 180px;
   background: url('./images/bg-footer.png') repeat-x top center;
-  /* Use the image at its natural aspect; scale height if you want it taller */
-  background-size: auto 180px; 
-  z-index: -1;                 /* sit behind the text */
+  background-size: auto 180px;
+  z-index: -1;
 }
 
