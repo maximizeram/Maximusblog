@@ -44,8 +44,8 @@ body {
 /* === HEADER BAR === */
 .topbar {
   background: url('./images/bar-top.png') no-repeat center top;
-  background-size: cover; /* fills entire width without repeating */
-  height: 140px; /* increased height */
+  background-size: cover;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,6 @@ body {
   z-index: 2;
   margin-top: 30px;
   position: relative;
-}
 }
 
 /* === NAVIGATION LINKS === */
@@ -73,20 +72,11 @@ body {
   text-transform: uppercase;
   text-shadow: 2px 2px 0 #fff;
   transition: all 0.25s ease-in-out;
-  padding: 0; /* remove yellow box padding */
-  background: none; /* removes the yellow box */
+  background: none;
   border-radius: 0;
 }
 
 .navbar a:hover {
-  color: #d62828; /* turns red on hover */
-  transform: scale(1.05);
-}
-}
-}
-
-.navbar a:hover {
-  background: rgba(255, 220, 0, 1);
   color: #d62828;
   transform: scale(1.05);
 }
@@ -173,38 +163,51 @@ body {
   object-fit: contain;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-}
 
-/* === SOCIAL ICONS (fixed top-right corner) === */
+/* === SOCIAL ICONS (top-right corner) === */
 .social-icons {
   position: fixed;
-  top: 12px;
-  right: 24px;
+  top: 15px;
+  right: 25px;
   display: flex;
   align-items: center;
   gap: 14px;
-  z-index: 999; /* keeps it above clouds and header */
+  z-index: 999;
 }
 
+/* remove underlines and improve clickability */
+.social-icons a {
+  text-decoration: none;
+  line-height: 0;
+}
+
+/* default icon sizing */
 .social-icons img {
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
+  display: inline-block;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
 
+/* hover animation */
 .social-icons img:hover {
   transform: scale(1.15);
 }
 
-/* Logo styling */
+/* logo larger */
 .site-logo {
-  width: 46px;
-  height: 46px;
-  object-fit: contain;
+  width: 70px;
+  height: 70px;
+  margin-right: 12px;
   border-radius: 8px;
-  margin-right: 10px;
+}
+
+/* make eBay slightly bigger */
+.social-icons img[alt="eBay"] {
+  width: 48px;
+  height: 48px;
 }
 
 /* === FOOTER === */
