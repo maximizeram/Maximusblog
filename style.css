@@ -1,27 +1,38 @@
-/* === FONTS === */
-@font-face {
-  font-family: 'AngryRegular';
-  src: url('./fonts/angrybirds-regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'AngryText';
-  src: url('./fonts/AngryBirdsText.ttf') format('truetype');
-}
-
-/* === GLOBAL === */
-body {
+/* === RESET === */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'AngryText', sans-serif;
-  color: #222;
-  text-align: center;
-  background: url('./images/background.jpg') no-repeat center top fixed;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('./images/background.jpg') no-repeat center center fixed;
   background-size: cover;
+  font-family: 'AngryRegular', sans-serif;
+  color: #000;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* === TOP CLOUDS === */
+body::before {
+  content: "";
+  background: url('./images/cloud-left.png') no-repeat left top,
+              url('./images/cloud-right.png') no-repeat right top;
+  background-size: 400px, 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* === HEADER BAR === */
 .topbar {
   background: url('./images/bar-top.png') repeat-x top center;
+  background-position-y: 10px; /* Move yellow bar down slightly */
   height: 90px;
   position: relative;
   display: flex;
@@ -31,53 +42,16 @@ body {
   z-index: 10;
 }
 
-.cloud {
-  position: absolute;
-  top: 0;
-  height: 90px;
-  z-index: 1;
-}
-
-.cloud-left { left: 0; }
-.cloud-right { right: 0; }
-
-/* === TITLE === */
-h1 {
-  font-family: 'AngryRegular', sans-serif;
-  font-size: 48px;
-  color: #c62828;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-family: 'AngryText', sans-serif;
-  font-size: 18px;
-  color: #111;
-  margin-bottom: 30px;
-}
-
-/* === NAVIGATION (on top bar) === */
+/* === NAVIGATION LINKS === */
 .navbar {
   position: relative;
-  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
-  top: -8px; /* move links upward slightly */
-}
+  top: -8px; /* Raise text a bit for better centering */
 }
 
-.navbar a {
-  font-family: 'AngryRegular', sans-serif;
-  font-size: 22px;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0 #fff;
-  transition: all 0.2s ease-in-out;
-}
 .navbar a {
   font-family: 'AngryRegular', sans-serif;
   font-size: 22px;
@@ -97,45 +71,79 @@ h1 {
   transform: scale(1.05);
 }
 
-.navbar a:hover {
+/* === HEADER TITLE === */
+.header {
+  margin-top: 10px;
+  padding: 20px 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  font-family: 'AngryBirdsRegular', sans-serif;
+  font-size: 52px;
   color: #d62828;
-  transform: scale(1.1);
+  text-shadow: 2px 2px #fff;
+  letter-spacing: 2px;
 }
 
-/* === MAIN CONTENT === */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: left;
-}
-
-/* === POSTS === */
-.post {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #ddd;
-}
-
-.post h2 {
+.header p {
   font-family: 'AngryRegular', sans-serif;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* === POSTS CONTAINER === */
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+/* === POST CARDS === */
+.post {
+  width: 70%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+.post a {
+  color: #2b2be0;
   font-size: 28px;
-  color: #c62828;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post a:hover {
+  color: #d62828;
 }
 
 .post p {
+  margin-top: 15px;
   font-size: 18px;
-  line-height: 1.6;
 }
 
 /* === FOOTER === */
-footer {
+.footer {
+  margin-top: 60px;
+  font-size: 16px;
+  color: #333;
   text-align: center;
-  font-size: 14px;
-  color: #444;
-  padding: 40px 0;
+  padding-bottom: 20px;
+  z-index: 2;
+  position: relative;
 }
-
