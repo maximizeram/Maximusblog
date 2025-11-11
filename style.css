@@ -55,3 +55,60 @@ h1, h2, h3 {
 }
 img { max-width: 100%; border-radius: 6px; margin: 1rem 0; }
 footer { color: #666; font-size: 0.9rem; margin-top: 2rem; }
+
+/* === Angry Birds Sky Background === */
+body {
+  background: url('images/ui/background.jpg') no-repeat center top fixed;
+  background-size: cover;
+  font-family: 'AngryText', sans-serif;
+}
+
+/* === Top Bar === */
+.topbar {
+  position: relative;
+  background: url('images/ui/bar-top.png') repeat-x center top;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Cloud edges */
+.cloud {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  z-index: 1;
+}
+
+.cloud-left {
+  left: 0;
+}
+
+.cloud-right {
+  right: 0;
+}
+
+/* Navigation links */
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  font-family: 'AngryRegular', sans-serif;
+  color: #222;
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 1px 1px 0 #fff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #c62828;
+  transform: scale(1.1);
+}
+
