@@ -2,15 +2,11 @@
 @font-face {
   font-family: 'AngryBirdsRegular';
   src: url('/Maximusblog/fonts/angrybirds-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'AngryBirdsText';
   src: url('/Maximusblog/fonts/AngryBirdsText.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* === RESET === */
@@ -35,30 +31,33 @@ body {
 /* === TOP CLOUDS === */
 body::before {
   content: "";
-  background: url('./images/cloud-left.png') no-repeat left top,
-              url('./images/cloud-right.png') no-repeat right top;
-  background-size: 400px, 400px;
+  background:
+    url('./images/cloud-left.png') no-repeat left top,
+    url('./images/cloud-right.png') no-repeat right top;
+  background-size: 500px, 500px; /* Larger and smoother edges */
   position: absolute;
-  top: 0;
+  top: -30px; /* Move clouds higher, behind the bar */
   left: 0;
   width: 100%;
-  height: 200px;
-  z-index: 0; /* ⬅ Behind bar */
+  height: 240px;
+  z-index: 0; /* Behind everything */
   pointer-events: none;
+  opacity: 0.9; /* Slight fade for soft edges */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 /* === HEADER BAR === */
 .topbar {
   background: url('./images/bar-top.png') repeat-x center top;
-  background-position-y: 0;
   height: 90px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  z-index: 5; /* ⬅ Above clouds */
-  margin-top: 40px; /* Adds spacing from top of browser */
+  z-index: 5;
+  margin-top: 60px; /* Adds space from browser top */
 }
 
 /* === NAVIGATION LINKS === */
@@ -92,7 +91,7 @@ body::before {
 
 /* === HEADER TITLE === */
 .header {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 10px 0;
   position: relative;
   z-index: 2;
@@ -127,13 +126,14 @@ body::before {
 
 /* === POST CARDS === */
 .post {
-  width: 70%;
+  width: min(85%, 800px); /* Centered and narrower */
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
-  padding: 40px;
-  margin: 20px 0;
+  padding: 30px;
+  margin: 20px auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
+  text-align: left;
 }
 
 .post:hover {
@@ -154,6 +154,7 @@ body::before {
 .post p {
   margin-top: 15px;
   font-size: 18px;
+  text-align: left;
 }
 
 /* === ARTICLE PAGE IMAGES === */
@@ -167,4 +168,11 @@ body::before {
 
 /* === FOOTER === */
 .footer {
-  margin-
+  margin-top: 60px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  padding-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
