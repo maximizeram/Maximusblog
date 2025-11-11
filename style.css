@@ -8,10 +8,13 @@
 body {
   background: url('./images/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  font-family: 'AngryRegular', sans-serif;
+  font-family: 'AngryRegular', sans-serif !important;
   color: #000;
   text-align: center;
   overflow-x: hidden;
+  padding-top: 60px; /* ⬅ Moves everything down evenly (fixes overlap) */
+  position: relative;
+  z-index: 0;
 }
 
 /* === TOP CLOUDS === */
@@ -25,22 +28,21 @@ body::before {
   left: 0;
   width: 100%;
   height: 200px;
-  z-index: 1;
+  z-index: 1; /* ⬅ Behind bar and text */
   pointer-events: none;
 }
 
 /* === HEADER BAR === */
 .topbar {
-  background: url('./images/bar-top.png') repeat-x top center;
-  background-position-y: 10px; /* Move yellow bar down slightly */
+  background: url('./images/bar-top.png') repeat-x center top;
+  background-position-y: 10px;
   height: 90px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  margin-top: 40px; /* <<< added space below browser top */
+  z-index: 5; /* ⬅ Above clouds */
 }
 
 /* === NAVIGATION LINKS === */
@@ -50,11 +52,11 @@ body::before {
   justify-content: center;
   align-items: center;
   gap: 80px;
-  top: -8px; /* Raise text a bit for better centering */
+  top: -8px;
 }
 
 .navbar a {
-  font-family: 'AngryRegular', sans-serif;
+  font-family: 'AngryRegular', sans-serif !important;
   font-size: 22px;
   color: #000;
   text-decoration: none;
@@ -74,14 +76,14 @@ body::before {
 
 /* === HEADER TITLE === */
 .header {
-  margin-top: 10px;
-  padding: 20px 0 10px;
+  margin-top: 20px;
+  padding: 10px 0;
   position: relative;
   z-index: 2;
 }
 
 .header h1 {
-  font-family: 'AngryBirdsRegular', sans-serif;
+  font-family: 'AngryBirdsRegular', sans-serif !important;
   font-size: 52px;
   color: #d62828;
   text-shadow: 2px 2px #fff;
@@ -89,7 +91,7 @@ body::before {
 }
 
 .header p {
-  font-family: 'AngryRegular', sans-serif;
+  font-family: 'AngryRegular', sans-serif !important;
   font-size: 20px;
   color: #000;
   text-align: center;
@@ -138,6 +140,15 @@ body::before {
   font-size: 18px;
 }
 
+/* === ARTICLE PAGE IMAGES === */
+.post-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
 /* === FOOTER === */
 .footer {
   margin-top: 60px;
@@ -148,4 +159,3 @@ body::before {
   z-index: 2;
   position: relative;
 }
-
