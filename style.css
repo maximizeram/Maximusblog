@@ -186,6 +186,22 @@ body {
   text-align: left;
 }
 
+/* === NORMALIZE LINK SIZE INSIDE POSTS === */
+.post p a,
+.post p a:visited {
+  font-size: inherit;        /* match paragraph font size */
+  font-weight: normal;       /* not bold unless styled explicitly */
+  color: #2b2be0;            /* consistent link color */
+  text-decoration: underline;
+  text-shadow: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.post p a:hover {
+  color: #d62828;            /* red on hover */
+  text-decoration: underline;
+}
+
 /* === ARTICLE PAGE IMAGES === */
 .post img,
 .post-container img {
