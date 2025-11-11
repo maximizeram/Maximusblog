@@ -1,14 +1,13 @@
 [
   {
     "title": "AB Test",
-    "date": "2025-11-10",
-    "url": "./posts/ab_test.html"
-  }
-]
-[
+    "url": "./posts/ab_test.html",
+    "date": "November 10, 2025"
+  },
   {
-    "title": "Beetle GSR",
-    "date": "2025-11-11",
-    "url": "./posts/GSR_Test.html"
+    "title": "GSR Test",
+    "url": "./posts/GSR_Test.html",
+    "date": "November 11, 2025"
   }
 ]
+
